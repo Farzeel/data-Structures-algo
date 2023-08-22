@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+class Stack{
+     data = [];
+     currentsize;
+     maxSize;
+     removeItem;
+    constructor(size){
+      this.currentsize = this.data.length
+      this.maxSize = size
+    }
+    push(newVal){
+        if(this.currentsize >=this.maxSize){
+             console.log("Satck is full No more Items can be Added")
+        }
+        else{
+            this.data[this.currentsize] = newVal
+            this.currentsize++
+        }
+    }
+    pop(){
+        
+        if(this.currentsize<0){
+            console.log("Stack Is Already Empty")
+        }
+        else{
+            this.removeItem = this.data[this.currentsize-1]
+            
+            this.currentsize--
+            this.data.length =this.currentsize 
+        }
+        return this.removeItem
+    }
+    display(){
+        console.log(this.data)
+    }
+    revesre(str){
+        str = str.split("")
+        for(let i=0; i<str.length ; i++){
+          this.push(str[i])  
+        }
+        for(let i=0; i<str.length ; i++){
+         str[i]=this.pop() 
+         
+        }
+        return str.join("")
+       
+     
+        
+    
+        
+    }
+}
+let str = "yes"
+
+// console.log(str)
+let st1  = new Stack(5)
+console.log(st1.revesre(str)) 
+
+
+// st1.pop()
+// st1.display()
+    </script>
+</body>
+</html>

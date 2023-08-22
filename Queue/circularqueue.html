@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    class Queue{
+       
+
+        constructor(size) {
+        this.maxSize = size;
+        this.queue = new Array(size);
+        this.front = -1;
+        this.rear = -1;
+        this.currentSize = 0;
+    }
+
+    isFull() {
+        return (this.front === 0 && this.rear === this.maxSize - 1) || (this.front === this.rear + 1);
+    }
+
+    isEmpty() {
+        return this.currentSize === 0;
+    }
+
+    display() {
+        console.log("Current Size:", this.currentSize);
+        console.log("Queue:", this.queue);
+        console.log("Front:", this.front);
+        console.log("Rear:", this.rear);
+    }
+    enqueue(item) {
+        if (this.isFull()) {
+            console.log("Queue is full. Cannot enqueue.");
+            return;
+        }
+
+        if (this.isEmpty()) {
+            this.front = 0;
+            this.rear = 0;
+        } else if (this.rear === this.maxSize - 1) {
+            this.rear = 0;
+        } else {
+            this.rear++;
+        }
+
+        this.queue[this.rear] = item;
+        this.currentSize++;
+    }
+    dequeue() {
+        if (this.isEmpty()) {
+            console.log("Queue is empty. Cannot dequeue.");
+            return;
+        }
+
+        const item = this.queue[this.front];
+        this.queue[this.front] = null;
+
+        if (this.front === this.rear) {
+            this.front = -1;
+            this.rear = -1;
+        } else if (this.front === this.maxSize - 1) {
+            this.front = 0;
+        } else {
+            this.front++;
+        }
+
+        this.currentSize--;
+        return item;
+    }
+
+ 
+
+    }
+    let q1 = new Queue(6)
+    q1.enqueue(1)
+    q1.enqueue(2)
+    q1.enqueue(3)
+    q1.enqueue(5)
+    q1.enqueue(5)
+    q1.enqueue(6)
+   
+
+
+
+    
+   
+   
+    
+ 
+
+
+
+
+
+
+
+   
+    
+ 
+    
+
+    q1.display()
+
+
+    </script>
+</body>
+</html>

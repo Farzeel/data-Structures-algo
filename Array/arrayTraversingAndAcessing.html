@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array travesring and acessing</title>
+</head>
+<body>
+    <input type="text" id="inputText">
+    <button onclick=getElement()>get Element</button>
+    <script>
+        let data = [1,4,2,11,87,3,2,6]
+        const getElement = ()=>{
+            let val = document.getElementById("inputText").value
+           if(val>data.length || val<0 || typeof val!="number"){
+
+               console.log("enter a valid number")
+            }
+            else{
+                console.log(data[val])
+            }
+         
+         
+        }
+    </script>
+</body>
+</html>

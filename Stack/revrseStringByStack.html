@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+             let data = []
+        let currentValue = data.length
+    
+        function push(newValue){
+        
+        data[currentValue]=newValue
+        currentValue +=1
+       
+        }
+     
+       function pop(){
+          let popvalue  = data[currentValue-1]
+          currentValue -=1
+          data.length = currentValue
+          return popvalue
+       }
+       let str = "hello"
+       str = str.split("")
+        
+       function reverseStr(str){
+              for(let i=0 ;i<str.length;i++){
+               
+               push(str[i])
+              }
+              for(let i=0 ; i<str.length;i++){
+                str[i]=pop()
+                
+              }
+          
+            
+       }
+    //    console.log(str)
+    reverseStr(str)
+    str = str.join("")
+    console.log(str)
+
+    //  console.log(reverseStr(str) )
+
+    //    console.log(str)
+
+
+    </script>
+</body>
+</html>

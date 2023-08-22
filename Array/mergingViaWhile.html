@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr1 = [1,2,3,4,5,6,77]
+        let arr2 = [11,14,33,45,67]
+        let arr3 = []
+
+        let i=0
+        let j=0
+        let k=0
+        while (i<arr1.length && j<arr2.length) {
+            if(arr1[i] < arr2[j]){
+              arr3[k] = arr1[i]
+              i++
+            }else{
+                arr3[k]=arr2[j]
+                j++
+            }
+            k++
+        }
+        console.log(arr3)
+        // while(j<arr2.length){
+        //     arr3[arr1.length+j] = arr2[j]
+        //      j++
+        // }
+        // console.log(arr3)
+        // console.log(k)
+       while(i<arr1.length){
+          arr3[k]=arr1[i]
+        i++
+       }
+       console.log(arr3);
+       
+    </script>
+</body>
+</html>

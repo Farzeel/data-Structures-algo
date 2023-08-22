@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    //     let data = ["hello","farzeel","furqan","raza"]
+    //     find  = "furqan"
+    //     let element = undefined
+    //   for(let i=0;i<data.length;i++){
+    //       if(data[i]==find){
+    //        element = `${data[i] } on index ${i}`
+    //        console.log(element)
+    //         break;
+    //       }
+        
+       
+    //   }
+    //   if(element==undefined){
+    //     console.log("element not found")
+    //   }
+    function wordStartingWithSameLetter(wordsArray,letter){
+        let sameStartingletter = []
+        for (words of wordsArray){
+           if(words.includes(letter)){
+            sameStartingletter.push(words)
+           }
+        }
+      return sameStartingletter
+    }
+    let data = ["hello","farzeel","furqan","raza"]
+
+    console.log(wordStartingWithSameLetter(data,'a'))
+    
+    </script>
+</body>
+</html>

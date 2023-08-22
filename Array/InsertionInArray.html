@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion</title>
+</head>
+<body>
+    <input type="text" placeholder="number want to insert" id="element">
+    <input type="text" placeholder="which position " id="position">
+    <button onclick="insertElement()">Insert</button>
+    <script>
+
+        let data = [1,5,3,9,10,4];
+    
+
+    document.write(`<br>${data}`)
+        // let newElement = 34;
+        // let position = 3;
+        // for(let i=data.length-1 ; i>0; i--){
+        //     // console.log(data[i])
+        //     if(i>=position){
+        //         data[i+1] = data[i]
+        //     }
+        //     if(i==position){
+        //         data[i]=newElement
+        //     }
+        // }
+        // console.log(data)
+       function insertElement(){
+      
+    
+          let newElement = Number(document.getElementById("element").value);
+          let position = Number(document.getElementById("position").value);
+        for(let i=data.length-1 ; i>0; i--){
+            // console.log(data[i])
+            if(i>=position){
+                data[i+1] = data[i]
+            }
+            if(i==position){
+                data[i]=newElement
+            }
+        }
+       document.write(data)
+       }
+ 
+    </script>
+</body>
+</html>

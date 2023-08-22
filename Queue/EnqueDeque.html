@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+
+    let queue = []
+    let currentsize = queue.length
+    let maxSize = 5
+
+    function Enque(value){
+        if(currentsize>=maxSize){
+            console.log("Queue is Full no more items can be added")
+        }
+        else{
+           queue[currentsize] = value
+           currentsize++ 
+        }
+    }
+    function Deque(){
+    for(i=0 ; i<currentsize; i++){
+        queue[i] = queue[i+1]
+    }
+    currentsize--
+    queue.length = currentsize
+    }
+    
+    function display(){
+        console.log(queue)
+    }
+
+    Enque(2)
+    Enque(3)
+    Enque(4)
+    Enque(6)
+    Enque(7)
+    
+Deque()
+    display()
+
+   </script> 
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+        let arr1 = [1,2,3,4,5];
+        let arr2 = [6,7,8,9,10];
+        // let arr3 = [...arr1,...arr2]
+        // console.log(arr3)
+
+        console.log(arr1.concat(arr2)) 
+        let mergeArr = [];
+
+        for(let i=0 ; i<arr1.length;i++){
+            // mergeArr.push(arr1[i])
+         mergeArr[i]= arr1[i]
+        }
+        for(let i=0 ; i<arr2.length;i++){
+            // mergeArr.push(arr1[i])
+      mergeArr[arr1.length+i]= arr2[i]
+        }
+       
+        console.log(mergeArr)
+
+    </script>
+</body>
+</html>
